@@ -21,23 +21,30 @@ public class Syllables {
                 if (b > 3) {
                     if (ch[0] >= 65 && ch[0] <= 90)
                         continue;
-                    for (int i = 0; i < ch.length - 1; i++) {
+                    for (int i = 0; i < ch.length-1; i++) {
                         //  int b= ch.length;
                         if ((ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u') && (ch[i + 1] != 'a' && ch[i + 1] != 'e' && ch[i + 1] != 'i' && ch[i + 1] != 'o' && ch[i + 1] != 'u') ) {
                             count++;
-                            //System.out.println(ch[i]);
+                            System.out.println(ch[i]);
 
-                            if (count >= 3) {
-                                syll++;
-                                break;
+                         //   if (count >= 3) {
+                         //       syll++;
+                         //       break;
                             }
                             //else syll is being incremented even for  syll
                             //System.out.println(ch[i]);
                         }
-                    }
+
+
                     if(sat.endsWith("ed")||sat.endsWith("es")||sat.endsWith("ing"))
                     {
-                        syll--;
+                        if(count >=4){
+                            syll++;
+                        System.out.println("The number of Syllables are0 "+syll);}
+                    }
+                    else if(count>=3) {
+                        syll++;
+                        System.out.println("The number of Syllables are1 "+syll);
                     }
                     count = 0;
                 }

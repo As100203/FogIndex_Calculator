@@ -11,7 +11,7 @@ public class word_lines {
             Scanner sc = new Scanner(file);
             while(sc.hasNextLine()){
                 String sat = sc.next();
-                if(sat.charAt(0)=='.' || sat.charAt(0)=='-')
+                if(sat.charAt(0)=='.' || sat.charAt(0)=='-'||sat.charAt(0)=='?')
                     continue;
                 word++;
                // if(sc.)

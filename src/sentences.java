@@ -12,7 +12,7 @@ public class sentences {
 
             while(sc.hasNextLine()){
                 String line = sc.nextLine();
-                StringTokenizer st = new StringTokenizer(line,".");
+                StringTokenizer st = new StringTokenizer(line,".?");
                 while(st.hasMoreTokens()){
                     String sta = st.nextToken();
                     sentences++;
